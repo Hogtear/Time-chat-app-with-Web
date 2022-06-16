@@ -24,7 +24,7 @@
           margin: 0;
           display: flex;
           justify-content: center;
-          background: rgb(14, 14, 53);
+          background: rgb(43, 43, 51);
         }
     
         #message-container {
@@ -46,7 +46,7 @@
           position: fixed;
           padding-bottom: 30px;
           bottom: 0;
-          background-color: rgb(14,14,53);
+          background-color: rgb(43, 43, 51);
           max-width: 1200px;
           width: 80%;
           display: flex;
@@ -54,19 +54,30 @@
     
         #message-input {
           flex-grow: 1;
+          border: none;
+          outline: none;
           font-family: Poppins;
           border-radius: 25px;
+          transition: .3s;
+        }
+        
+        #message-input:focus {
+          transition: .3s;
+          border: 2px ridge #09ac68;
         }
 
         #send-button {
             background-color: #09ac68;
             border: none;
+            margin-left: 6px;
             border-radius: 50px;
             padding: 10px 10px 10px 10px;
             cursor: pointer;
+            transition: .4s;
         }
 
         #send-button:hover {
+          transition: .4s;
             background-color: #0cdb85;
         }
 
@@ -92,7 +103,7 @@
       </style>
   <div id="message-container"></div>
   <form id="send-container">
-    <input type="text" id="message-input">
+    <input type="text" placeholder="  Digite sua mensagem..." id="message-input">
     <button type="submit" id="send-button">
         <i class="uil uil-message"></i>
     </button>
